@@ -8,7 +8,7 @@ export const TeachersideBarItems = [
   export const sideBarItems = [
     {
       title: "LEARN",
-      href: "/learn",
+      href: "/student/topic1",
     },
     {
       title: "LEADERBOARD",
@@ -23,3 +23,22 @@ export const TeachersideBarItems = [
       href: "/profile",
     }
   ];
+
+  export const LearnItems = [
+    {
+      title:"1",
+      href:"/topic1",
+    },
+    {
+      title:"2",
+      href:"/topic2",
+    },
+    {
+      title:"3",
+      href:"/topic3",
+    },
+    {
+      title:"4",
+      href:"/topic5",
+    },
+  ]
