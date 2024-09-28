@@ -26,7 +26,7 @@ export default function SideBar() {
   return (
     <main
       className={` text-white flex flex-row ${
-        width < 1400 && width > 920 ? "w-[5.5rem]" : 'w-[18rem]'
+        width < 1400 && width > 920 ? "w-[5.5rem]" : "w-[18rem]"
       } ${
         width < 920
           ? " absolute border-t-2 flex justify-center text-center bg-[#131f24] py-3 w-full flex-row bottom-0 items-center right-0 left-0 px-2"
@@ -60,8 +60,9 @@ export default function SideBar() {
             className={`flex rounded-2xl group border-2 transition-all w-full items-center ${
               width < 1400 && "justify-center"
             } text-base font-extrabold gap-4 p-3  cursor-pointer ${
-              pathname == item.href ?
-              "text-sky-300 border-[2px] border-sky-300/50 bg-sky-300/5":'border-transparent hover:bg-gray-700/20'
+              pathname == item.href
+                ? "text-sky-300 border-[2px] border-sky-300/50 bg-sky-300/5"
+                : "border-transparent hover:bg-gray-700/20"
             }`}
           >
             <Image
@@ -73,6 +74,22 @@ export default function SideBar() {
             {width < 1400 ? "" : <p className="   ">{item.title}</p>}
           </Link>
         ))}
+        <button
+          className={`flex rounded-2xl border-transparent group border-2 transition-all w-full active:bg-sky-300/5 items-center ${
+            width < 1400 && "justify-center"
+          } text-base font-extrabold gap-4 p-3  cursor-pointer
+            ? "text-sky-300 border-[2px] hover:border-sky-300/50 bg-sky-300/5"
+            : "border-transparent"
+        }`}
+        >
+          <Image
+            src={"/Images/log-out.png"}
+            width={width < 1400 ? 24 : 32}
+            height={24}
+            alt={"Logout"}
+          />
+          {width < 1400 ? "" : <p className="">{"Logout"}</p>}
+        </button>
       </div>
     </main>
   );

@@ -28,7 +28,7 @@ export const TeachersideBarItems = [
     },
     {
       title: "PROFILE",
-      href: "/profile",
+      href: "student/profile",
     }
   ];
 

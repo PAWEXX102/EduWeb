@@ -1,10 +1,10 @@
-import StudentSidebar from "../components/StudentSidebar";
+import StudentSidebar from "@/app/components/StudentSidebar";
 
 export default function Learn() {
   return (
     <div className=" flex text-white w-full">
       <StudentSidebar />
-      Leadeboatrd
+      Leadeboard
     </div>
   );
 }
