@@ -35,7 +35,7 @@ export const TeachersideBarItems = [
   export const LearnItems = [
     {
       title:"1",
-      href:"/topic1",
+      href:"/student/topic1",
     },
     {
       title:"2",
