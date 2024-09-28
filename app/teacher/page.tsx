@@ -1,4 +1,4 @@
-import SideBar from "../components/sidebar";
+import SideBar from "../components/TeacherSidebar";
 import { MyButton } from "../components/buttons";
 
 
