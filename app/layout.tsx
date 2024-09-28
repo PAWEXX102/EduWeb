@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Nunito } from "next/font/google";
-
+import Login from "./components/login";
+import Providers from "./providers";
 const font = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
-    </html>
+        <body className={font.className}>
+          <Providers>
+            <div className="flex w-full relative h-svh">{children}</div>
+            <Login />
+          </Providers>
+        </body>
+      </html>
   );
 }
