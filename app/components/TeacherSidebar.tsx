@@ -44,7 +44,7 @@ export default function SideBar() {
           />
         ) : (
           <h1 className=" font-extrabold text-4xl text-lime-400 ml-7 mb-7">
-            duolingo
+            EduWeb
           </h1>
         )}
       </div>
