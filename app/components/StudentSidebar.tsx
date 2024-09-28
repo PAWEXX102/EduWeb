@@ -25,8 +25,8 @@ export default function SideBar() {
   }, []);
   return (
     <main
-      className={` text-white flex flex-row ${
-        width < 1400 && width > 920 ? "w-[5.5rem]" : "w-[18rem]"
+      className={` text-white bg-[#131f24] z-40 flex flex-row ${
+        width < 1400 && width > 920 ? "max-w-[5.5rem]" : "w-[20rem]"
       } ${
         width < 920
           ? " absolute border-t-2 flex justify-center text-center bg-[#131f24] py-3 w-full flex-row bottom-0 items-center right-0 left-0 px-2"

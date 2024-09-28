@@ -1,4 +1,4 @@
-import SideBar from "../components/StudentSidebar";
+import SideBar from "../components/TeacherSidebar";
 
 export default function Page() {
   return (

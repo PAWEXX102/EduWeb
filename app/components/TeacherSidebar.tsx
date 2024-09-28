@@ -25,7 +25,7 @@ export default function SideBar() {
   }, []);
   return (
     <main
-      className={` text-white flex flex-row ${
+      className={` text-white bg-[#131f24] z-30 flex flex-row ${
         width < 1400 && width > 920 ? "w-[5.5rem]" : "w-[18rem]"
       } ${
         width < 920
