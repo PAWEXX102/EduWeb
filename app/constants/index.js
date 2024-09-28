@@ -16,7 +16,7 @@ export const TeachersideBarItems = [
   export const sideBarItems = [
     {
       title: "LEARN",
-      href: "/student/topic1",
+      href: "/student",
     },
     {
       title: "LEADERBOARD",
