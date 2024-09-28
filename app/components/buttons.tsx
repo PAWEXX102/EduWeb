@@ -4,7 +4,6 @@ import { extendVariants, Button } from "@nextui-org/react";
 
 export const MyButton = extendVariants(Button, {
   variants: {
-    // <- modify/add variants
     color: {
       primary:
         "text-[#cbd5e1] bg-[#FFF] border-[#e2e8f0] border-[3px] border-b-[5px] active:border-b-[3px] ",
@@ -26,13 +25,13 @@ export const MyButton = extendVariants(Button, {
     },
   },
   defaultVariants: {
-    // <- modify/add default variants
+
     color: "primary",
     size: "xl",
     font: "bold",
   },
   compoundVariants: [
-    // <- modify/add compound variants
+ 
     {
       isDisabled: true,
       color: "primary",
@@ -43,7 +42,7 @@ export const MyButton = extendVariants(Button, {
 
 export const RoundedButton = extendVariants(Button, {
   variants: {
-    // <- modify/add variants
+
     color: {
       primary:
         "text-[#cbd5e1] bg-[#FFF] border-[#e2e8f0] border-[3px] border-b-[5px] active:border-b-[3px] ",
@@ -65,13 +64,12 @@ export const RoundedButton = extendVariants(Button, {
     },
   },
   defaultVariants: {
-    // <- modify/add default variants
     color: "primary",
     size: "xl",
     font: "bold",
   },
   compoundVariants: [
-    // <- modify/add compound variants
+
     {
       isDisabled: true,
       color: "primary",

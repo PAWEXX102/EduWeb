@@ -12,7 +12,7 @@ export default function Learn() {
             <StudentSidebar />
             <nav className="absolute flex flex-row justify-center w-full">
                 <div className="flex flex-col">
-                    <div className="flex flex-row bg-green-500 mt-7 pr-7 py-6 rounded-3xl w-[42rem] justify-between">
+                    <div className="flex flex-row bg-green-500 mt-7 pr-7 py-6 rounded-3xl w-[50rem] justify-between">
                         <div className="flex flex-col">
                             <h1 className="text-white font-bold text-2xl text-gray-50 px-5">Moduł 1 Sekcja 1</h1>
                             <h1 className="text-white text-lg text-gray-50 px-5">Naucz się z nami zawodowych</h1>
@@ -25,7 +25,7 @@ export default function Learn() {
                 </div>
             </nav>
             <div className="flex flex-col mt-[14rem]">
-                <RoundedButton className="flex  rounded-full">
+                <RoundedButton className="flex text-black rounded-full">
                     1
                 </RoundedButton>
             </div>
