@@ -1,7 +1,15 @@
 export const TeachersideBarItems = [
     {
-      title: "LEARN",
-      href: "/learn",
+      title: "DASHBOARD",
+      href: "/teacher",
+    },
+    {
+      title: 'CLASSES',
+      href: '/teacher/classes',
+    },
+    {
+      title: 'Profile',
+      href: '/teacher/profile',
     },
   ];
 

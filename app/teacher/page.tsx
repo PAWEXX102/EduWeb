@@ -1,8 +1,12 @@
-import TeacherSidebar from "../components/TeacherSidebar";
+import SideBar from "../components/TeacherSidebar";
+import { MyButton } from "../components/buttons";
+
 
 export default function Home() {
   return <main className=" text-white flex w-full h-full">
-    <TeacherSidebar />
-    Teacher
+    <SideBar />
+    <MyButton>Witaj</MyButton>
+    <MyButton color="secondary">Witaj</MyButton>
+    <MyButton color='active'>Witaj</MyButton>
   </main>;
 }
