@@ -70,130 +70,20 @@ export default function Home() {
               <ModalBody>
                 <div className=" w-full flex flex-col gap-y-3 h-full rounded-[2rem] border-gray-600">
                   <div className=" w-full flex items-center overflow-auto justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Szymon Tryczynski</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
+                    <div className=" flex gap-x-3 items-center">
+                      <p className=" font-bold text-lg ml-3">
+                        Szymon Tryczynski
+                      </p>
+                      <div className=" flex justify-center font-extrabold  items-center text-center text-orange-600  rounded-xl">
+                        <p className=" text-2xl">2</p>
+                        <Image
+                          src="/Images/reading.gif"
+                          alt="flame"
+                          width={40}
+                          height={30}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Przemek Zagaja</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div>
-                  <div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
-                    <div className=" flex gap-x-5">
-                      <MyButton
-                        color="active"
-                        size="md"
-                        className=" bg-red-500 border-red-800 rounded-2xl"
-                      >
-                        Delete
-                      </MyButton>
-                    </div>
-                  </div><div className=" w-full flex items-center justify-between  border-2 p-2 rounded-3xl border-gray-600">
-                    <p className=" font-bold text-lg ml-3">Paweł Sarzyński</p>
                     <div className=" flex gap-x-5">
                       <MyButton
                         color="active"
