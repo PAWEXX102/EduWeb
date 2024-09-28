@@ -11,7 +11,7 @@ export default function Page() {
   const [input, setInput] = useState<string>("");
   const [prompt, setPrompt] = useState<string>("");
   const [allMessages, setAllMessages] = useState<
-    { prompt: string, role: string }[]
+    { prompt: string; role: string }[]
   >([]);
   const [isLoading, setLoading] = useState(false);
   const [width, setWidth] = useState<number>(0);
@@ -23,19 +23,19 @@ export default function Page() {
     setPrompt(input);
     const finalUser = { prompt: input, role: "user" };
     setAllMessages((prev) => [...prev, finalUser]);
+    /*
     const result = await chatSession.sendMessage(input);
     setInput("");
     console.log(input);
     setLoading(false);
     const finalAi = { prompt: result.response.text(), role: "ai" };
     setAllMessages((prev) => [...prev, finalAi]);
-   /*
+    */
     setTimeout(() => {
       const finalAi = { prompt: "AIIII", role: "ai" };
       setAllMessages((prev) => [...prev, finalAi]);
       setLoading(false);
     }, 2000);
-    */
   };
 
   useEffect(() => {
