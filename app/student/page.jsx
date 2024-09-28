@@ -1,9 +1,10 @@
-"use client";
+import StudentSidebar from "../components/StudentSidebar";
 
-export default function Page(){
-    return(
-        <nav>
-        <h1>Hello student</h1>
-        </nav>
-    )
+export default function Learn() {
+  return (
+    <div className=" flex text-white w-full">
+      <StudentSidebar />
+      Learn
+    </div>
+  );
 }
