@@ -10,8 +10,6 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
   signInWithEmailAndPassword,
-  signInWithPopup,
-  GoogleAuthProvider,
 } from "firebase/auth";
 import { useRegisterValidation, useLoginValidation } from "../validation/auth";
 import InputForm from "./input";
@@ -52,30 +50,6 @@ export default function Login() {
     console.log("Document written with ID: ", docRef.id);
   };
 
-  const provider = new GoogleAuthProvider();
-
-  const googleLogin = async () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential ? credential.accessToken : null;
-        // The signed-in user info.
-        const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
-      });
-  };
 
   const handlePageChange = () => {
     setFormType(formType === "Login" ? "Register" : "Login");
@@ -246,20 +220,6 @@ export default function Login() {
           <div className=" w-full h-1 bg-[#2c4652] mt-5 rounded-full"></div>
         </div>
         <div className="flex justify-between gap-5 mt-2 ">
-          <MyButton
-            color="secondary"
-            size="md"
-            onClick={googleLogin}
-            className=" rounded-xl w-full border-[#2c4652] text-lg px-3 py-5"
-          >
-            <Image
-              src="/Images/google.svg"
-              width={25}
-              height={20}
-              alt="google"
-            />
-            Google
-          </MyButton>
           <MyButton
             color="secondary"
             size="md"

@@ -5,3 +5,26 @@
 :root{
   background-color: #131f24;
 }
+
+::-webkit-scrollbar {
+  width: 1px; /* Szerokość suwaka */
+}
+
+::-webkit-scrollbar-track {
+  background: #131f24; /* Kolor tła suwaka */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #131f24; /* Kolor uchwytu suwaka */
+  border-radius: 20px; /* Zaokrąglenie uchwytu suwaka */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1b2d34; /* Kolor uchwytu suwaka po najechaniu */
+}
+
+/* Stylowanie suwaka dla przeglądarek Firefox */
+* {
+  scrollbar-width: thin; /* Szerokość suwaka */
+  scrollbar-color: #1b2d34 #131f24; /* Kolor uchwytu i tła suwaka */
+}
