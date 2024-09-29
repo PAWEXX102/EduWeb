@@ -6,6 +6,10 @@ import Image from "next/image";
 import { MyButton } from "../components/buttons";
 import { LearnItems } from "@/app/constants/index";
 import { useState, useEffect } from "react";
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "@/app/services/firebase";
+import { ProgrammingTasks } from "@/app/tasks/index";
+import { motion } from "framer-motion";
 import {
   Modal,
   ModalContent,
@@ -30,6 +34,8 @@ export default function Learn() {
 
     window.addEventListener("resize", updateWidth);
 
+    console.log(ProgrammingTasks);
+
     return () => {
       window.removeEventListener("resize", updateWidth);
     };
@@ -38,18 +44,61 @@ export default function Learn() {
   return (
     <div className="flex text-white w-full">
       <StudentSidebar />
-      <div className="flex overflow-auto gap-y-10 justify-center flex-col relative w-[70rem] mx-auto items-center">
-        <div className=" absolute right-[-20px] top-14 flex gap-x-2">
-          <button className=" flex items-center p-2 hover:bg-gray-600/50 rounded-xl">
+      <div className="flex overflow-auto gap-y-10 mb-24 sm:mb-0 justify-center flex-col relative w-[70rem] mx-auto items-center">
+        <div className=" absolute right-0 top-11 flex"></div>
+        {Object.values(ProgrammingTasks).map((task: any, index: any) => (
+          <div
+            key={index}
+            className=" flex flex-col pt-[25rem] md:pt-0 w-full items-center"
+          >
+            <h1 className="text-3xl text-gray-300 font-bold py-4 ml-10 ">
+              {task.title}
+            </h1>
+            <div className="flex opacity-30 p-2 rounded-3xl h-full flex-row gap-x-3 ml-10 items-center flex-wrap gap-y-3">
+              {LearnItems.map((item) => (
+                <>
+                  <Link
+                    className={`flex text-purple-900 bg-purple-400 border-b-[6px] active:border-b-3 rounded-3xl border-purple-900 text-xl font-extrabold border-3 active:scale-90 ${
+                      width < 1400 ? "py-3 px-5" : "py-5 px-7"
+                    }`}
+                    href={"/training/" + index + "?id=" + item.title}
+                    key={index}
+                  >
+                    {item.title}
+                  </Link>
+                  <div className=" h-4 w-14 bg-gray-600/30 rounded-full"></div>
+                </>
+              ))}
+              <MyButton
+                color="secondary"
+                isDisabled
+                size="xl"
+                className={` text-white rounded-2xl ${
+                  width < 1400 ? "h-[61px]" : "h-[77px]"
+                }`}
+              >
+                Odbierz
+                <Image
+                  src="/Images/points.svg"
+                  alt="nagroda"
+                  width={width < 1400 ? 30 : 40}
+                  height={width < 1400 ? 30 : 40}
+                />
+              </MyButton>
+            </div>
+          </div>
+        ))}
+        <motion.div className="flex absolute top-6 left-0 right-0 mx-auto flex-row py-2 pr-2 rounded-full xl:w-[30rem] lg:w-[25rem] md:w-[20rem] w-[10rem] justify-end bg-black border-gray-600/50">
+          <button className=" flex items-center p-2 hover:bg-gray-600/50 rounded-full">
             <Image
               src="/Images/jp.svg"
               alt="kurs"
               width={35}
               height={40}
-              className="rounded-md"
+              className="rounded-full"
             />
           </button>
-          <button className=" flex items-center pl-2 py-1 hover:bg-gray-600/50 rounded-xl">
+          <button className=" flex items-center pl-2 py-1 hover:bg-gray-600/50 rounded-full">
             <p className="text-white text-2xl font-bold">300</p>
             <Image
               src="/Images/points.svg"
@@ -58,137 +107,7 @@ export default function Learn() {
               height={40}
             />
           </button>
-        </div>
-        <div className=" flex flex-col w-full items-center">
-          <h1 className="text-3xl text-gray-300 font-bold py-4 ml-10 ">
-            Dział 3: Budowa maszyn CNC:
-          </h1>
-          <div className="flex opacity-30 p-2 rounded-3xl h-full flex-row gap-x-3 ml-10 items-center flex-wrap gap-y-3">
-            {LearnItems.map((item, index) => (
-              <>
-                <Link
-                  className={`flex text-purple-900 bg-purple-400 border-b-[6px] active:border-b-3 rounded-3xl border-purple-900 text-xl font-extrabold border-3 active:scale-90 ${
-                    width < 1400 ? "py-3 px-5" : "py-5 px-7"
-                  }`}
-                  href={item.href}
-                  key={index}
-                >
-                  {item.title}
-                </Link>
-                <div className=" h-4 w-14 bg-gray-600/30 rounded-full"></div>
-              </>
-            ))}
-            <MyButton
-              color="secondary"
-              isDisabled
-              size="xl"
-              className={` text-white rounded-2xl ${
-                width < 1400 ? "h-[61px]" : "h-[77px]"
-              }`}
-            >
-              Odbierz
-              <Image
-                src="/Images/points.svg"
-                alt="nagroda"
-                width={width < 1400 ? 30 : 40}
-                height={width < 1400 ? 30 : 40}
-              />
-            </MyButton>
-          </div>
-        </div>
-        <div className=" flex flex-col w-full items-center">
-          <h1 className="text-3xl text-gray-300 font-bold py-4 ml-10 ">
-            Dział 3: Budowa maszyn CNC:
-          </h1>
-          <div className="flex opacity-30 p-2 rounded-3xl h-full flex-row gap-x-3 ml-10 items-center flex-wrap gap-y-3">
-            {LearnItems.map((item, index) => (
-              <>
-                <Link
-                  className={`flex text-purple-900 bg-purple-400 border-b-[6px] active:border-b-3 rounded-3xl border-purple-900 text-xl font-extrabold border-3 active:scale-90 ${
-                    width < 1400 ? "py-3 px-5" : "py-5 px-7"
-                  }`}
-                  href={item.href}
-                  key={index}
-                >
-                  {item.title}
-                </Link>
-                <div className=" h-4 w-14 bg-gray-600/30 rounded-full"></div>
-              </>
-            ))}
-            <MyButton
-              color="secondary"
-              isDisabled
-              size="xl"
-              className={` text-white rounded-2xl ${
-                width < 1400 ? "h-[61px]" : "h-[77px]"
-              }`}
-            >
-              Odbierz
-              <Image
-                src="/Images/points.svg"
-                alt="nagroda"
-                width={width < 1400 ? 30 : 40}
-                height={width < 1400 ? 30 : 40}
-              />
-            </MyButton>
-          </div>
-        </div>
-        <div className=" flex flex-col w-full items-center">
-          <h1 className="text-3xl text-gray-300 font-bold py-4 ml-10 ">
-            Dział 3: Budowa maszyn CNC:
-          </h1>
-          <div className="flex opacity-30 p-2 rounded-3xl h-full flex-row gap-x-3 ml-10 items-center flex-wrap gap-y-3">
-            {LearnItems.map((item, index) => (
-              <>
-                <Link
-                  className={`flex text-purple-900 bg-purple-400 border-b-[6px] active:border-b-3 rounded-3xl border-purple-900 text-xl font-extrabold border-3 active:scale-90 ${
-                    width < 1400 ? "py-3 px-5" : "py-5 px-7"
-                  }`}
-                  href={item.href}
-                  key={index}
-                >
-                  {item.title}
-                </Link>
-                <div className=" h-4 w-14 bg-gray-600/30 rounded-full"></div>
-              </>
-            ))}
-            <MyButton
-              color="secondary"
-              isDisabled
-              size="xl"
-              className={` text-white rounded-2xl ${
-                width < 1400 ? "h-[61px]" : "h-[77px]"
-              }`}
-            >
-              Odbierz
-              <Image
-                src="/Images/points.svg"
-                alt="nagroda"
-                width={width < 1400 ? 30 : 40}
-                height={width < 1400 ? 30 : 40}
-              />
-            </MyButton>
-          </div>
-        </div>
-        <div className="flex absolute top-0 left-0 right-0 mx-auto flex-row bg-green-500 mt-7 pr-7 py-6 rounded-3xl xl:w-[50rem] lg:w-[30rem] md:w-[45rem] justify-between">
-          <div className="flex flex-col">
-            <h1 className="text-white font-bold lg:text-xl md:text-lg text-gray-50 px-5">
-              Moduł 1 Sekcja 1
-            </h1>
-            <h1 className="text-white text-lg text-gray-50 px-5">
-              Naucz się z nami zawodowych
-            </h1>
-          </div>
-          <MyButton onPress={onOpen}>
-            <Image
-              src="/images/notepad.png"
-              alt="przevodnik"
-              width={35}
-              height={35}
-            />
-            <p className="lg:text-lime-500">PRZEWODNIK</p>
-          </MyButton>
-        </div>
+        </motion.div>
       </div>
       <Modal
         isOpen={isOpen}
