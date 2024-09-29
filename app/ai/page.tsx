@@ -1,9 +1,9 @@
 "use client";
 
-import SideBar from "../components/StudentSidebar";
+import SideBar from '@/app/components/StudentSidebar';
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { chatSession } from "../utils/AiModel";
+import { chatSession } from "../../utils/AiModel";
 import { motion } from "framer-motion";
 import { Spinner } from "@nextui-org/react";
 
@@ -118,26 +118,6 @@ export default function Page() {
           )}
         </div>
         <div className=" w-full flex pt-5  h-24 flex-col justify-end gap-y-5">
-          {prompt.length <= 0 && width >= 920 && (
-            <div className=" w-full flex">
-              <button
-                onClick={() => setInput("Solve the equation 12x + 7 = 9x + 10")}
-                className=" w-[14rem] relative active:scale-95 h-[14rem] bg-[#1d2f37] border-2 border-transparent rounded-3xl hover:scale-105 transition-all hover:bg-sky-300/5 hover:border-sky-300/50 "
-              >
-                <p className=" absolute top-4 mx-auto left-0 right-0 font-extrabold text-lg">
-                  Solve the equation
-                </p>
-                <div className=" w-max h-max bg-[#152228] p-2 rounded-xl absolute right-3 bottom-3">
-                  <Image
-                    src="/Images/math.svg"
-                    alt="math"
-                    width={20}
-                    height={100}
-                  />
-                </div>
-              </button>
-            </div>
-          )}
           <div
             className={` w-full flex ${
               width <= 920 ? "h-12" : "h-full"

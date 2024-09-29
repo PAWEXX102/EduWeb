@@ -6,8 +6,6 @@ import Image from "next/image";
 import { MyButton } from "../components/buttons";
 import { LearnItems } from "@/app/constants/index";
 import { useState, useEffect } from "react";
-import { getDocs, collection } from "firebase/firestore";
-import { db } from "@/app/services/firebase";
 import { ProgrammingTasks } from "@/app/tasks/index";
 import { motion } from "framer-motion";
 import {
@@ -21,7 +19,7 @@ import {
 } from "@nextui-org/react";
 
 export default function Learn() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpenChange } = useDisclosure();
 
   const [width, setWidth] = useState<number>(0);
 
@@ -54,11 +52,15 @@ export default function Learn() {
             <h1 className="text-3xl text-gray-300 font-bold py-4 ml-10 ">
               {task.title}
             </h1>
-            <div className="flex opacity-30 p-2 rounded-3xl h-full flex-row gap-x-3 ml-10 items-center flex-wrap gap-y-3">
-              {LearnItems.map((item) => (
+            <div className="flex p-2 rounded-3xl h-full flex-row gap-x-3 ml-10 items-center flex-wrap gap-y-3">
+              {LearnItems.map((item,key) => (
                 <>
                   <Link
-                    className={`flex text-purple-900 bg-purple-400 border-b-[6px] active:border-b-3 rounded-3xl border-purple-900 text-xl font-extrabold border-3 active:scale-90 ${
+                    className={`flex  border-b-[6px] active:border-b-3 rounded-3xl ${
+                      task[key + 1]?.Complete === true
+                        ? "border-green-900 bg-green-400 text-green-900"
+                        : " bg-purple-400 border-purple-900 text-purple-900"
+                    }text-xl font-extrabold border-3 active:scale-90 ${
                       width < 1400 ? "py-3 px-5" : "py-5 px-7"
                     }`}
                     href={"/training/" + index + "?id=" + item.title}
@@ -99,7 +101,7 @@ export default function Learn() {
             />
           </button>
           <button className=" flex items-center pl-2 py-1 hover:bg-gray-600/50 rounded-full">
-            <p className="text-white text-2xl font-bold">300</p>
+            <p className="text-white text-2xl font-bold">0</p>
             <Image
               src="/Images/points.svg"
               alt="nagroda"

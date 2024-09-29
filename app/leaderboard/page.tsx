@@ -1,6 +1,7 @@
 import StudentSidebar from "@/app/components/StudentSidebar";
 import Image from "next/image";
 import { MyButton } from "@/app/components/buttons";
+import Link from "next/link";
 
 
 export default function Learn() {
@@ -22,7 +23,7 @@ export default function Learn() {
             You have to complete at least 3 courses to unlock the leaderboard.
           </p>
           <MyButton color="secondary" className=" mt-5 rounded-2xl">
-            Start Learning
+            <Link href="/student">Start Learning</Link>
           </MyButton>
         </div>
         <div className=" flex w-full  items-center mb-24 mt-20 gap-y-10 overflow-auto flex-col">

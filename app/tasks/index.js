@@ -1,44 +1,55 @@
 export const ProgrammingTasks = {
   [0]: {
     title: "Zestaw zadań nr 1",
-    Question1: {
+    1: {
       Task: "Co to jest debugowanie?",
-      Answer_a: "Proces pisania dokumentacji do aplikacji.",
-      Answer_b: "Proces szukania i naprawiania błędów w kodzie.",
-      Answer_c: "Tworzenie kopii zapasowych projektów.",
+      Options: {
+        a: "Proces pisania dokumentacji do aplikacji.",
+        b: "Proces szukania i naprawiania błędów w kodzie.",
+        c: "Tworzenie kopii zapasowych projektów.",
+      },
       Right_answer: "b",
+      Complete: false,
       answerType: "Choose",
     },
-    Question2: {
-      Task: "Co to jest frezarka ?",
-      Answer_a:
-        "Maszyna służąca do obróbki skrawaniem, która usuwa materiał z powierzchni przedmiotów.",
-      Answer_b: "Narzędzie używane przy malowaniu.",
-      Answer_c: "Urządzenie zajmujące się spawaniem.",
+    2: {
+      Task: "Który typ bazy danych jest najczęściej używany do przechowywania danych w formacie klucz-wartość?",
+      Options:{
+      a: "Relacyjna baza danych",
+      b: "NoSQL",
+      c: "Baza grafowa",
+      },
       Right_answer: "a",
+      Complete: false,
       answerType: "Choose",
     },
-    Question3: {
-      Task: "Kasia ma 12 paczek cukierków, a w każdej paczce jest 5 cukierków. Ile cukierków ma Kasia łącznie? Zapisz równanie.",
-      Right_answer: "5 x 12 = 60",
+    3: {
+      Task: "Utwórz zmienną o nazwie carName i przypisz jej wartość Volvo.",
+      Right_answer: "var carName = 'Volvo';",
       answerType: "Type",
+      Complete: false,
     },
-    Question4: {
-      Task: "Polska pierwszych Piastów. Kto był pierwszym historycznym władcą Polski?",
-      Answer_a: "Bolesław Chrobry",
-      Answer_b: "Mieszko I",
-      Answer_c: "Kazimierz Wielki",
+    4: {
+      Task: "Co to jest algorytm?",
+      Options:{
+      a: "Zbiór kroków do rozwiązania konkretnego problemu.",
+      b: "Forma graficzna przedstawiająca dane.",
+      c: "Rodzaj języka programowania.",
+      },
       Right_answer: "b",
       answerType: "Choose",
+      Complete: false,
     },
-    Question5: {
-      Task: "Co to jest system operacyjny?",
-      Answer_a: "Program, który wykonuje obliczenia",
-      Answer_b:
-        "Program, który zarządza sprzętem komputerowym i oprogramowaniem",
-      Answer_c: "Program do edycji zdjęć",
-      Right_Answer: "b",
+    5: {
+      Task: "Co to jest algorytm?",
+      Options:{
+      a: "Zbiór kroków do rozwiązania konkretnego problemu.",
+      b: "Forma graficzna przedstawiająca dane.",
+      c: "Rodzaj języka programowania.",
+      },
+      Right_answer: "b",
       answerType: "Choose",
+      Complete: false,
     },
   },
   [1]: {
