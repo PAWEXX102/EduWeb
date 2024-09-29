@@ -68,14 +68,14 @@ export default function Page() {
                   width <= 920 ? "text-4xl" : "text-5xl"
                 }  font-extrabold`}
               >
-                Welcome
+                Witaj
               </h1>
               <p
                 className={`font-bold text-[#2c4752] ${
                   width <= 920 ? "text-2xl" : "text-5xl"
                 }`}
               >
-                {"Let's solve some problems"}
+                {"Rozwiążmy kilka problemów"}
               </p>
             </>
           )}

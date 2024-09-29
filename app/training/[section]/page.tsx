@@ -68,7 +68,7 @@ export default function Page({
         color="active"
         className=" w-[15rem] mx-auto"
       >
-        Submit
+        Zatwierdź
       </MyButton>
     </main>
   );

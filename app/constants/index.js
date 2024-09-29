@@ -1,25 +1,25 @@
 export const TeachersideBarItems = [
     {
-      title: "DASHBOARD",
+      title: "PANEL",
       href: "/teacher",
     },
     {
-      title: 'CLASSES',
+      title: 'KLASY',
       href: '/teacher/classes',
     },
     {
-      title: 'Profile',
+      title: 'PROFIL',
       href: '/teacher/profile',
     },
   ];
 
   export const sideBarItems = [
     {
-      title: "LEARN",
+      title: "NAUKA",
       href: "/student",
     },
     {
-      title: "LEADERBOARD",
+      title: "RANKING",
       href: "/leaderboard",
     },
     {
@@ -27,7 +27,7 @@ export const TeachersideBarItems = [
       href: "/ai",
     },
     {
-      title: "PROFILE",
+      title: "PROFIL",
       href: "student/profile",
     }
   ];

@@ -26,9 +26,9 @@ export default function Home() {
             alt="teacher"
           />
           <h1 className=" text-2xl font-black">
-            Welcome ! <br />{" "}
+            Witaj ! <br />{" "}
             <p className=" font-bold text-xl">
-              Here you can manage your class.
+            Tutaj możesz zarządzać swoją klasą.
             </p>
           </h1>
         </div>
@@ -41,13 +41,13 @@ export default function Home() {
                 onClick={onOpen}
                 className=" bg-yellow-500 border-yellow-800 rounded-2xl"
               >
-                Details
+                Detale
               </MyButton>
               <MyButton
                 color="active"
                 className=" bg-red-500 border-red-800 rounded-2xl"
               >
-                Delete
+                Usuń
               </MyButton>
             </div>
           </div>

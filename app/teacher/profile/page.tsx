@@ -8,10 +8,10 @@ export default function Page() {
       <div className=" w-[90rem] mx-auto flex p-10">
         <div className=" flex flex-col gap-y-2">
           <h1 className=" font-black text-6xl">
-            Welcome, <span className=" text-lime-400">Maria</span>
+            Witaj, <span className=" text-lime-400">Maria</span>
           </h1>
           <h1 className=" font-extrabold text-2xl">
-            User since : <span className=" text-lime-400">28.09.2021</span>
+            Użytkownik od: <span className=" text-lime-400">28.09.2021</span>
           </h1>
         </div>
       </div>

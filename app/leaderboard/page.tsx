@@ -17,13 +17,13 @@ export default function Learn() {
             alt="shield"
           />
           <h1 className=" text-2xl font-black text-white">
-            Unlock Leaderboard
+            Odblokuj ranking
           </h1>
           <p className=" text-lg text-[#619db7]">
-            You have to complete at least 3 courses to unlock the leaderboard.
+            Musisz wykonać 3 kursy, aby odblokować ranking.
           </p>
           <MyButton color="secondary" className=" mt-5 rounded-2xl">
-            <Link href="/student">Start Learning</Link>
+            <Link href="/student">Zacznij naukę</Link>
           </MyButton>
         </div>
         <div className=" flex w-full  items-center mb-24 mt-20 gap-y-10 overflow-auto flex-col">
@@ -39,7 +39,7 @@ export default function Learn() {
             <div className=" flex items-center">
               <div className="mr-8 font-black text-xl">1</div>
               <Image
-                src="/Images/Profile.svg"
+                src="/Images/PROFIL.svg"
                 width={40}
                 height={30}
                 alt="User"
