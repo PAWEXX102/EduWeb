@@ -1,9 +1,5 @@
 export const TeachersideBarItems = [
     {
-      title: "PANEL",
-      href: "/teacher",
-    },
-    {
       title: 'KLASY',
       href: '/teacher/classes',
     },

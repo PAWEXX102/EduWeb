@@ -3,7 +3,7 @@
 import SideBar from '@/app/components/StudentSidebar';
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { chatSession } from "../../utils/AiModel";
+import { chatSession } from "@/app/utils/AiModel";
 import { motion } from "framer-motion";
 import { Spinner } from "@nextui-org/react";
 
@@ -23,19 +23,12 @@ export default function Page() {
     setPrompt(input);
     const finalUser = { prompt: input, role: "user" };
     setAllMessages((prev) => [...prev, finalUser]);
-    /*
     const result = await chatSession.sendMessage(input);
     setInput("");
     console.log(input);
     setLoading(false);
     const finalAi = { prompt: result.response.text(), role: "ai" };
     setAllMessages((prev) => [...prev, finalAi]);
-    */
-    setTimeout(() => {
-      const finalAi = { prompt: "AIIII", role: "ai" };
-      setAllMessages((prev) => [...prev, finalAi]);
-      setLoading(false);
-    }, 2000);
   };
 
   useEffect(() => {

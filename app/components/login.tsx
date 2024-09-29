@@ -23,6 +23,7 @@ export default function Login() {
   const [password, setPassword] = useState<string>("");
   const [cnfPassword, setCnfPassword] = useState<string>("");
   const [formType, setFormType] = useState<"Login" | "Register">("Login");
+  const [role,setRole] = useState<"Student" | "Teacher">("Student");
   const {
     handleSubmit,
     register,
@@ -46,6 +47,7 @@ export default function Login() {
       email: values.email,
       password: values.password,
       createdAt: Timestamp.now(),
+      points:0,
     });
     console.log("Document written with ID: ", docRef.id);
   };
@@ -67,6 +69,7 @@ export default function Login() {
     username?: string;
     password: string;
     cnfPassword?: string;
+    role?:boolean;
   }
 
   const submitForm = async (values: FormValues) => {
@@ -84,8 +87,10 @@ export default function Login() {
           setUsername("");
           setPassword("");
           setCnfPassword("");
+          setRole;
+
           reset();
-          router.push("/learn");
+          router.push("/student");
         })
         .catch((e) => {
           console.log("catch ", e.message);
@@ -98,7 +103,7 @@ export default function Login() {
           setEmail("");
           setPassword("");
           reset();
-          router.push("/learn");
+          router.push("/student");
         })
         .catch((e) => {
           console.log("catch ", e.message);
@@ -106,6 +111,8 @@ export default function Login() {
         });
     }
   };
+
+  
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -141,7 +148,7 @@ export default function Login() {
       </div>
       <div className="my-auto w-[20rem] pb-[40px]">
         <p className="text-3xl font-extrabold text-white">
-          {formType == "Login" ? "Login" : "Create an account"}
+          {formType == "Login" ? "ZALOGUJ SIĘ" : "UTWÓRZ KONTO"}
         </p>
         <div className="relative h-12 mt-10 group">
           <InputForm
@@ -192,6 +199,7 @@ export default function Login() {
           className="h-12 mt-5"
         />
         {formType === "Register" && (
+          <>
           <InputForm
             set={setCnfPassword}
             value={cnfPassword}
@@ -202,6 +210,11 @@ export default function Login() {
             error={errors.cnfPassword}
             className="h-12 mt-5"
           />
+          <select name="role" id='role'  className="h-12 mt-5 w-full font-bold outline-none rounded-2xl text-lg px-2  border-2 focus:border-sky-300/50 bg-sky-300/5">
+           <option value="Student" className="text-black">Uczeń</option>
+           <option value="Teacher" className="text-black">Nauczyciel</option>
+          </select>
+          </>
         )}
         <MyButton
           color="active"
@@ -212,28 +225,9 @@ export default function Login() {
               : handleSubmit(submitForm)
           }
         >
-          {formType === "Login" ? "LOGIN" : "CREATE AN ACCOUNT"}
+          {formType === "Login" ? "ZALOGUJ SIĘ" : "UTWÓRZ KONTO"}
         </MyButton>
-        <div className="flex flex-row items-center ">
-          <div className=" w-full h-1 bg-[#2c4652] mt-5 rounded-full"></div>
-          <p className=" text-[#2c4652] font-bold mt-5 px-3">OR</p>
-          <div className=" w-full h-1 bg-[#2c4652] mt-5 rounded-full"></div>
-        </div>
-        <div className="flex justify-between gap-5 mt-2 ">
-          <MyButton
-            color="secondary"
-            size="md"
-            className=" w-full rounded-xl border-[#2c4652] text-lg px-3 py-5"
-          >
-            <Image
-              src="/Images/facebook.svg"
-              width={25}
-              height={20}
-              alt="facebook"
-            />
-            Facebook
-          </MyButton>
-        </div>
+        
       </div>
     </motion.div>
   );

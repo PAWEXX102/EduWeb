@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between w-full py-5 text-center text-white bg-white ">
       <nav className="w-full ">
-        <h1 className="text-4xl font-extrabold text-lime-500">duolingo 2</h1>
+        <h1 className="text-4xl font-extrabold text-lime-500">EduWeb</h1>
       </nav>
       <div className="flex flex-col items-center my-auto ">
         <p className=" text-4xl font-extrabold mb-14 text-zinc-600 max-w-[35rem] px-10">
@@ -16,7 +16,7 @@ export default function Home() {
         </p>
         <div className="flex-col absolute sm:flex sm:static bottom-0 px-5 w-full items-center max-w-[25rem]">
           <MyButton color="active" className="w-full ">
-            <Link href="/register">GET STARTED</Link>
+            <Link href="/?isLogin=true">GET STARTED</Link>
           </MyButton>
           <MyButton
             onClick={() => router.push("/?isLogin=true")}
