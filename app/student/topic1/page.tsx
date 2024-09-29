@@ -38,7 +38,7 @@ export default function Learn() {
         </div>
         <div className="flex flex-row  mx-28 items-center gap-x-10 mt-20 sm:mt-5">
           <div className="w-[50rem]">
-          <h1 className="text-4xl sm:text-2xl font-bold mb-4 sm:mb-2">Frezarki</h1>
+          <h1 className="text-4xl sm:text-2xl font-bold mb-4">Frezarki</h1>
             <h2 className="text-2xl font-semibold">Zalety:</h2>
             <div className="flex flex-row mt-2">
               <Image
@@ -84,10 +84,10 @@ export default function Learn() {
 
           <Image
             src="/Images/frezarka.jpg"
-            width={450}
-            height={450}
+            width={350}
+            height={350}
             alt="frezarka"
-            className={`ml-2 mb-7 rounded-2xl ${width > 800 ? "block" : "hidden"}`}
+            className={`ml-2 mb-7 rounded-2xl ${width > 920 ? "block" : "hidden"}`}
           />
         </div>
       </nav>
