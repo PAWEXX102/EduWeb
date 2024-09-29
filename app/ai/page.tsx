@@ -127,7 +127,7 @@ export default function Page() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Set Prompt"
+              placeholder="Wpisz wiadomość..."
               className={` w-full p-4 h-full z-20 focus:border-sky-300/50 bg-transparent border-2 px-8 rounded-full font-extrabold outline-none border-[#1d2f37] ${
                 width <= 920 ? " text-lg" : "text-xl"
               } `}

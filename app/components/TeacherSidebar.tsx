@@ -87,9 +87,9 @@ export default function SideBar() {
             src={"/Images/log-out.png"}
             width={width < 1400 ? 24 : 32}
             height={24}
-            alt={"Logout"}
+            alt={"Wyloguj"}
           />
-          {width < 1400 ? "" : <p className="">{"Logout"}</p>}
+          {width < 1400 ? "" : <p className="">{"Wyloguj"}</p>}
         </button>
       </div>
     </main>
