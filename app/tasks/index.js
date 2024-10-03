@@ -9,7 +9,7 @@ export const ProgrammingTasks = {
         c: "Tworzenie kopii zapasowych projektów.",
       },
       Right_answer: "b",
-      Complete: false,
+      Complete: null,
       answerType: "Choose",
     },
     2: {
@@ -20,14 +20,14 @@ export const ProgrammingTasks = {
       c: "Baza grafowa",
       },
       Right_answer: "b",
-      Complete: false,
+      Complete: null,
       answerType: "Choose",
     },
     3: {
       Task: "Utwórz zmienną o nazwie carName i przypisz jej wartość Volvo.",
       Right_answer: "var carName = 'Volvo';",
       answerType: "Type",
-      Complete: false,
+      Complete: null,
     },
     4: {
       Task: "Co to jest algorytm?",
@@ -38,7 +38,7 @@ export const ProgrammingTasks = {
       },
       Right_answer: "a",
       answerType: "Choose",
-      Complete: false,
+      Complete: null,
     },
     5: {
       Task: "Co to jest front-end?",
@@ -49,7 +49,7 @@ export const ProgrammingTasks = {
       },
       Right_answer: "b",
       answerType: "Choose",
-      Complete: false,
+      Complete: null,
     },
   },
   [1]: {

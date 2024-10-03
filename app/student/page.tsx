@@ -53,13 +53,18 @@ export default function Learn() {
               {task.title}
             </h1>
             <div className="flex p-2 rounded-3xl h-full flex-row gap-x-3 ml-10 items-center flex-wrap gap-y-3">
-              {LearnItems.map((item,key) => (
+              {LearnItems.map((item, key) => (
                 <>
                   <Link
                     className={`flex  border-b-[6px] active:border-b-3 rounded-3xl ${
-                      task[key + 1]?.Complete === true
-                        ? "border-green-900 bg-green-400 text-green-900"
-                        : " bg-purple-400 border-purple-900 text-purple-900"
+                      task[key + 1]?.Complete == true &&
+                      "border-green-900 bg-green-400 text-green-900"
+                    } ${
+                      task[key + 1]?.Complete == null &&
+                      "bg-purple-400 border-purple-900 text-purple-900"
+                    } ${
+                      task[key + 1]?.Complete == false &&
+                      "bg-red-400 border-red-900 text-red-900"
                     }text-xl font-extrabold border-3 active:scale-90 ${
                       width < 1400 ? "py-3 px-5" : "py-5 px-7"
                     }`}
@@ -91,15 +96,6 @@ export default function Learn() {
           </div>
         ))}
         <motion.div className="flex absolute top-6 left-0 right-0 mx-auto flex-row py-2 pr-2 rounded-full xl:w-[30rem] lg:w-[25rem] md:w-[20rem] w-[10rem] justify-end bg-black border-gray-600/50">
-          <button className=" flex items-center p-2 hover:bg-gray-600/50 rounded-full">
-            <Image
-              src="/Images/jp.svg"
-              alt="kurs"
-              width={35}
-              height={40}
-              className="rounded-full"
-            />
-          </button>
           <button className=" flex items-center pl-2 py-1 hover:bg-gray-600/50 rounded-full">
             <p className="text-white text-2xl font-bold">0</p>
             <Image
