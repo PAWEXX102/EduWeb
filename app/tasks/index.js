@@ -1,6 +1,6 @@
 export const ProgrammingTasks = {
   [0]: {
-    title: "Zestaw zadań nr 1",
+    title: "Programowanie",
     1: {
       Task: "Co to jest debugowanie?",
       Options: {
@@ -53,7 +53,7 @@ export const ProgrammingTasks = {
     },
   },
   [1]: {
-    title: "Zestaw zadań nr 2",
+    title: "programowanie 2",
     1: {
       Task: "wybierz program SQL, który wyświtli wszystkie kolumny z tabeli Customers.",
       Options:{
@@ -99,6 +99,238 @@ export const ProgrammingTasks = {
       },
       Right_answer: "a",
       answerType: "Choose",
+    },
+  },
+  [2]: {
+    title: "Biologia",
+    1: {
+      Task: "Co to jest komórka?",
+      Options: {
+        a: "Najmniejsza jednostka życia",
+        b: "Część organizmu",
+        c: "Rodzaj tkanki",
+      },
+      Right_answer: "a",
+      Complete: null,
+      answerType: "Choose",
+    },
+    2: {
+      Task: "Jakie są główne grupy organizmów?",
+      Options:{
+      a: "Rośliny, zwierzęta, grzyby",
+      b: "Rośliny, minerały, woda",
+      c: "Zwierzęta, bakterie, powietrze",
+      },
+      Right_answer: "a",
+      Complete: null,
+      answerType: "Choose",
+    },
+    3: {
+      Task: "Co to jest fotosynteza?",
+      Options:{
+      a: "Proces oddychania roślin",
+      b: "Proces, w którym rośliny produkują tlen",
+      c: "Proces, w którym rośliny przetwarzają światło na energię.",
+      },
+      Right_answer: "c",
+      Complete: null,
+      answerType: "Choose",
+    },
+    4: {
+      Task: "Co to jest DNA?",
+      Options:{
+      a: "Cząsteczka odpowiedzialna za dziedziczenie cech",
+      b: "Rodzaj białka",
+      c: "Składnik błony komórkowej",
+      },
+      Right_answer: "a",
+      answerType: "Choose",
+      Complete: null,
+    },
+    5: {
+      Task: "Jakie zwierzęta są ssakami?",
+      Options:{
+      a: "Ptaki, ryby, gady",
+      b: "Psy, koty, ludzie",
+      c: "Owady, pajęczaki, skorupiaki",
+      },
+      Right_answer: "b",
+      answerType: "Choose",
+      Complete: null,
+    },
+  },
+  [3]: {
+    title: "Geografia",
+    1: {
+      Task: "Które jezioro jest największe na świecie?",
+      Options: {
+        a: "Jezioro Wiktorii",
+        b: "Morze Kaspijskie",
+        c: "Jezioro Górne",
+      },
+      Right_answer: "b",
+      Complete: null,
+      answerType: "Choose",
+    },
+    2: {
+      Task: "Jakie są kontynenty na Ziemi?",
+      Options:{
+      a: "Europa, Azja, Afryka, Ameryka, Australia, Antarktyda",
+      b: "Europa, Azja, Afryka, Ameryka Północna, Ameryka 	Południowa",
+      c: "Europa, Azja, Afryka, Ameryka, Australia",
+      },
+      Right_answer: "a",
+      Complete: null,
+      answerType: "Choose",
+    },
+    3: {
+      Task: "Jakie jest najwyższe pasmo górskie na świecie?",
+      Options:{
+      a: "Alpy",
+      b: "Himalaje",
+      c: "Karpaty",
+      },
+      Right_answer: "b",
+      Complete: null,
+      answerType: "Choose",
+    },
+    4: {
+      Task: "Jakie są strefy klimatyczne na Ziemi?",
+      Options:{
+      a: "Ciepła, zimna, wilgotna",
+      b: "Surowa, łagodna, ekstremalna",
+      c: "Tropikalna, umiarkowana, polarne",
+      },
+      Right_answer: "c",
+      answerType: "Choose",
+      Complete: null,
+    },
+    5: {
+      Task: "Która pustynia jest największa na świecie ?",
+      Options:{
+      a: "Pustynia Sahara",
+      b: "Pustynia Gobi",
+      c: "Pustynia Atakama",
+      },
+      Right_answer: "a",
+      answerType: "Choose",
+      Complete: null,
+    },
+  },
+    [4]: {
+    title: "Historia",
+    1: {
+      Task: "Kim był pierwszy władca Polski ?",
+      Options: {
+        a: "Mieszko I",
+        b: "Andrzej Duda",
+        c: "Jan III Sobieski",
+      },
+      Right_answer: "a",
+      Complete: null,
+      answerType: "Choose",
+    },
+    2: {
+      Task: "W którym roku miała miejsce wojna pod Grunwaldem ?",
+      Options:{
+      a: "1453",
+      b: "1525",
+      c: "1410",
+      },
+      Right_answer: "c",
+      Complete: null,
+      answerType: "Choose",
+    },
+    3: {
+      Task: "Kto odkrył Amerykę w 1492 roku?",
+      Options:{
+      a: "Vasco da Gama",
+      b: "Krzysztof Kolumb",
+      c: "Ferdynand Magellan",
+      },
+      Right_answer: "b",
+      Complete: null,
+      answerType: "Choose",
+    },
+    4: {
+      Task: "Kiedy zakończyła sie I wojna światowa ?",
+      Options:{
+      a: "1923",
+      b: "1913",
+      c: "1918",
+      },
+      Right_answer: "c",
+      answerType: "Choose",
+      Complete: null,
+    },
+    5: {
+      Task: "Kiedy miał miejsce chrzest Polski?",
+      Options:{
+      a: "966",
+      b: "966",
+      c: "1025",
+      },
+      Right_answer: "a",
+      answerType: "Choose",
+      Complete: null,
+    },
+  },
+      [5]: {
+    title: "Matematyka",
+    1: {
+      Task: "Ile to 45 + 29?",
+      Options: {
+        a: "53",
+        b: "74",
+        c: "2",
+      },
+      Right_answer: "b",
+      Complete: null,
+      answerType: "Choose",
+    },
+    2: {
+      Task: "Ile wynosi 68 - 35?",
+      Options:{
+      a: "33",
+      b: "33",
+      c: "35",
+      },
+      Right_answer: "a",
+      Complete: null,
+      answerType: "Choose",
+    },
+    3: {
+      Task: "Ile wynosi 6²?",
+      Options:{
+      a: "33",
+      b: "25",
+      c: "36",
+      },
+      Right_answer: "c",
+      Complete: null,
+      answerType: "Choose",
+    },
+    4: {
+      Task: "Ile wynosi 12 x 4 ?",
+      Options:{
+      a: "48",
+      b: "46",
+      c: "50",
+      },
+      Right_answer: "a",
+      answerType: "Choose",
+      Complete: null,
+    },
+    5: {
+      Task: "Ile wynosi 2341 + 6724 ?",
+      Options:{
+      a: "2",
+      b: "9 065",
+      c: "725",
+      },
+      Right_answer: "b",
+      answerType: "Choose",
+      Complete: null,
     },
   },
 };
